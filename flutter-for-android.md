@@ -3,7 +3,7 @@ layout: page
 title: Flutter for Android Developers
 permalink: /flutter-for-android/
 ---
-# ******Flutter for Android Developers******
+# **Flutter for Android Developers**
 Intro to flutter for android dev, what it is, etc
 
 table of contents
