@@ -3,12 +3,11 @@ layout: page
 title: Flutter for Android Developers
 permalink: /flutter-for-android/
 ---
+##### ******Flutter for Android Developers******
 
-**Flutter for Android Developers**
+### **Views** 
 
-Views 
-
-What is the equivalent of a View in Flutter?
+**What is the equivalent of a View in Flutter?**
 
 In Android, the View is the foundation of everything that shows up on the screen. From Buttons, Toolbars and Inputs, everything is a View.  In Flutter the equivalent of a View would be Widget. However Widgets have a few differences when compared with a View. To start, widgets only live a few milliseconds on the screen (16ms/frame). In comparison, on Android when a View is drawn it does not redraw until invalidate is called. 
 
@@ -32,10 +31,9 @@ And how about a StatefulWidget with State
 
 
 
-How do I layout my Widgets? Where is my XML layout file?
+**How do I layout my Widgets? Where is my XML layout file?**
 
 In Android you write layouts via XML, in Flutter you write your "layouts" building a widget tree. 
-
 Lets look at an example of how you would display a simple Widget on the screen and add some padding to it.
 
 In Android you would typically do 
@@ -46,7 +44,7 @@ in Flutter you would do
 
 [code]
 
-How do I add or remove a Widget in Flutter?
+**How do I add or remove a Widget in Flutter?**
 
 In Android you would call addChild or removeChild from a parent to dynamically add or remove views from a parent. In Flutter, because widgets are immutable there is no addChild, instead you can simply pass in a function that returns a widget to the parent and control that child's creation via a boolean.
 
@@ -54,15 +52,14 @@ For example:
 
 [code] 
 
-In Android, I can Animate a view by View.animate(), how can I do that to a Widget?
-
+**In Android, I can Animate a view by View.animate(), how can I do that to a Widget?**
 In Flutter animating widgets can be done easily via a handful of Animation Widgets. See https://flutter.io/widgets/animation/
 
 Lets take a look at how to write a FadeTransition
 
 [code]
 
-How do I build custom Widgets?
+**How do I build custom Widgets?**
 
 Building custom widgets in Flutter is very similar to building custom Views in Android. You can extend the Widget and add your custom logic. 
 
@@ -70,9 +67,9 @@ Lets take a look at how to build a custom button
 
 [code]
 
-Intents
+### **Intents**
 
-What is the alternative of an Intent in Flutter?
+**What is the alternative of an Intent in Flutter?**
 
 Flutter does not have the concept of Intents. However in Android there are two main use-cases for Intents, One is to switch between Activities and another is to invoke external(or internal) components of your app (Camera, Services etc).
 
@@ -92,7 +89,7 @@ See [Flutter Plugins] to learn how to build a native platform integration.
 
 
 
-How do I handle incoming Intents from external applications in Flutter? 
+**How do I handle incoming Intents from external applications in Flutter?** 
 
 This can be achieved by registering the intent you want to handle in the AndroidMainfest.xml to launch MainActivity (the default activity created by Flutter)
 
@@ -106,9 +103,9 @@ Lastly in Flutter you can receive this via
 
 [code]
 
-Async UI
+#### **Async UI**
 
-What is the equivalent of runOnUiThread in Flutter?
+**What is the equivalent of runOnUiThread in Flutter?**
 
 Because of Flutters reactive architecture, there is no need to worry about if you are running stuff on the UI thread, as long as you make sure you dont block your network calls.
 
@@ -122,7 +119,7 @@ To update the UI you would call setState which would trigger the build method to
 
 
 
-What is the equivalent of an AsyncTask or IntentService on Android?
+**What is the equivalent of an AsyncTask or IntentService on Android?**
 
 In many cases you do not have to worry about threading in Flutter as long as you follow the async/await patterns. 
 
@@ -140,11 +137,11 @@ onPostExecute typically takes the value from the result of the doInBackground ta
 
 However there are times where you may be processing a large amount of data and your UI will hang. 
 
-To get around this you can run code in the background. See How do I run parallel code on multi-core devices? I.e AsyncTask.execute(AsyncTask.THREAD_POOL_EXECUTOR) or run code in a background thread?
+To get around this you can run code in the background. See <u>*How do I run parallel code on multi-core devices? I.e AsyncTask.execute(AsyncTask.THREAD_POOL_EXECUTOR) or run code in a background thread?*</u>
 
 
 
-How do I run parallel code on multi-core devices? I.e AsyncTask.execute(AsyncTask.THREAD_POOL_EXECUTOR) or run code in a background thread?
+**How do I run parallel code on multi-core devices? I.e AsyncTask.execute(AsyncTask.THREAD_POOL_EXECUTOR) or run code in a background thread?**
 
 Since Flutter uses a single threaded execution model, the code you write all executes on a single core on the mobile device. 
 
@@ -160,7 +157,7 @@ While it’s no golden rule, try to keep your Isolates to the number of cpu core
 
 
 
-How do I make network calls on Android and update the UI?
+**How do I make network calls on Android and update the UI?**
 
 Making a network call in Flutter is very easy when you use the popular "http" package from https://pub.dartlang.org/packages/http
 
@@ -180,7 +177,7 @@ Which will update your UI with the result from your network call.
 
 
 
-How do I show progress dialogs on android when there is a task that is running?
+**How do I show progress dialogs on android when there is a task that is running?**
 
 Before you call your long running task, you can show a Dialog to let the user know there is processing happening. This can be done by rendering a Dialog widget. You can show the Dialog programatically by controlling it's rendering through a boolean and telling Flutter to update it's state just before your long running task.
 
@@ -188,59 +185,55 @@ Before you call your long running task, you can show a Dialog to let the user kn
 
 
 
-Project Structure & Resources
+#### **Project Structure & Resources**
 
-Where do I store my resolution depedent image files?
+**Where do I store my resolution depedent image files?**
+**Where do I store strings?**
+**What is the alternative to Androids Resource system (i.e R.string, R.xml)**
 
-Where do I store strings?
-
-What is the alternative to Androids Resource system (i.e R.string, R.xml)
-
-What is the alternative of a gradle file to add my external dependecies?
+**What is the alternative of a gradle file to add my external dependecies?**
 
 
 
-Activities and Fragments
+#### **Activities and Fragments**
 
-- coming soon
+###### 
 
+#### Lifecycles
 
-Lifecycles
-- coming soon
+###### 
 
-
-Layouts
-- coming soon
+#### Layouts
 
 
-Gesture Detection and Event Handling
-- coming soon
 
+#### Gesture Detection and Event Handling
 
-Listviews & Adapters
-- coming soon
+###### 
 
+#### Listviews & Adapters
 
-Working with Text
-- coming soon
+###### 
 
+#### Working with Text
 
-Common Widget Map
-- coming soon
+###### 
 
+#### Common Widget Map
 
-Form Input
-- coming soon
+###### 
 
+#### Form Input
 
-Drawing Shapes
-- coming soon
+###### 
 
+#### Drawing Shapes
 
-Flutter Plugins
-- coming soon
+###### 
 
+#### Flutter Plugins
 
-Themes
-- coming soon
+###### 
+
+#### Themes
 
