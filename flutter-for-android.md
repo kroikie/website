@@ -3,9 +3,12 @@ layout: page
 title: Flutter for Android Developers
 permalink: /flutter-for-android/
 ---
-##### ******Flutter for Android Developers******
+# ******Flutter for Android Developers******
+Intro to flutter for android dev, what it is, etc
 
-### **Views** 
+table of contents
+
+# **Views** 
 
 **What is the equivalent of a View in Flutter?**
 
@@ -67,7 +70,7 @@ Lets take a look at how to build a custom button
 
 [code]
 
-### **Intents**
+# **Intents**
 
 **What is the alternative of an Intent in Flutter?**
 
@@ -103,7 +106,7 @@ Lastly in Flutter you can receive this via
 
 [code]
 
-#### **Async UI**
+# **Async UI**
 
 **What is the equivalent of runOnUiThread in Flutter?**
 
@@ -185,55 +188,54 @@ Before you call your long running task, you can show a Dialog to let the user kn
 
 
 
-#### **Project Structure & Resources**
+# **Project Structure & Resources**
 
 **Where do I store my resolution depedent image files?**
+
 **Where do I store strings?**
+
 **What is the alternative to Androids Resource system (i.e R.string, R.xml)**
 
 **What is the alternative of a gradle file to add my external dependecies?**
 
 
 
-#### **Activities and Fragments**
+# **Activities and Fragments**
+ 
 
-###### 
-
-#### Lifecycles
-
-###### 
-
-#### Layouts
+# Lifecycles
 
 
 
-#### Gesture Detection and Event Handling
+# Layouts
 
-###### 
 
-#### Listviews & Adapters
+# Gesture Detection and Event Handling
 
-###### 
 
-#### Working with Text
+# Listviews & Adapters
 
-###### 
+ 
 
-#### Common Widget Map
+# Working with Text
 
-###### 
 
-#### Form Input
 
-###### 
+# Common Widget Map
 
-#### Drawing Shapes
 
-###### 
 
-#### Flutter Plugins
+# Form Input
 
-###### 
 
-#### Themes
+
+# Drawing Shapes
+
+
+
+# Flutter Plugins
+
+
+
+# Themes
 
