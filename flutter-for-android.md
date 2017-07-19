@@ -190,18 +190,47 @@ Before you call your long running task, you can show a Dialog to let the user kn
 
 # **Project Structure & Resources**
 
-**Where do I store my resolution depedent image files?**
+**Where do I store my resolution depedent image files? HDPI/XXHDPI**
 
-**Where do I store strings?**
+Flutter follows a simple 3 resolution format like iOS. 1x, 2x, and 3x.
 
-**What is the alternative to Androids Resource system (i.e R.string, R.xml)**
+Create a folder called images and for each of your image files, generate a @2x and @3x variant and place them in the folder like such
+
+- …/my_icon.png
+
+- …/2.0x/my_icon.png
+- …/3.0x/my_icon.png
+
+Then you would need to declare these images in your pubspec.yaml file
+
+[code]
+
+You can then access your images using AssetImage
+
+[code]
+
+**Where do I store strings? How do I store different locales**
+
+Currently best practice is to create a class called Strings that is locale aware, for example
+
+[code]
+
+Then in your code you can access your Strings as such
+
+[code]
 
 **What is the alternative of a gradle file to add my external dependecies?**
+
+While there are gradle files under the Android folder, you would only use these if you are adding dependecies needed for platform integration. Otherwise you can use pubspec.yaml to declare external dependencies.
+
+A good place to find great pacakges for flutter is pub.dartlang.org
+
+[code]
 
 
 
 # **Activities and Fragments**
- 
+
 
 # Lifecycles
 
@@ -238,4 +267,3 @@ Before you call your long running task, you can show a Dialog to let the user kn
 
 
 # Themes
-
